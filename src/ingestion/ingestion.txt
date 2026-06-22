@@ -1,0 +1,2 @@
+Nhiệm vụ: đọc dữ liệu từ các nguồn: .docx, .txt, .pdf,..
+langchain-text-splitters import RecursiveCharacterTextSplitter

@@ -1,0 +1,3 @@
+nhiệm vụ: biến text thành vector
+Tuỳ vào model mà import các thư viện
+langchain-openai, langchain-ollama
