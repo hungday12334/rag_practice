@@ -1,0 +1,202 @@
+﻿1. Scope: EventHub là nền tảng quản lý và bán vé sự kiện dành cho cá nhân, cộng đồng và các tổ chức chuyên nghiệp, cho phép các nhà tổ chức xây dựng uy tín theo thời gian và tổ chức các sự kiện phù hợp với mức độ tin cậy của mình. 
+2. Target Customer 
+* Basic Organizer (small scale):
+* CLB.
+* TikToker.
+* Streamer.
+* Workshop.
+* Offline fan.
+* Coffee Talk.
+* Professional Organizer (big scale):
+* Công ty.
+* Trung tâm đào tạo.
+* Ban tổ chức concert.
+* Festival.
+* Triển lãm.
+3. Các thông tin cần cấp
+1. Basic
+* Organization Name:  Định danh tổ chức          
+* Organization Description: Biết lĩnh vực hoạt động    
+* Organization Logo:  Branding                   
+* Responsible Person Name: Người chịu trách nhiệm     
+* Verified Email: Liên hệ và bảo mật         
+* Verified Phone: Liên hệ khẩn cấp           
+* Address/City: Xác định khu vực hoạt động 
+* Facebook/TikTok/Website (ít nhất 1):Tăng độ tin cậy            
+* Profile Image/Banner : Nhận diện tổ chức      
+* Bank Account Information: Tên tài khoản, ngân hàng, người thụ hưởng, số tài khoản.  Nó liên quan đến phần payment sau này. 
+2. Professional Organization 
+* Company/Organization Legal Name: Tên công ty
+* Business Registration Certificate: chứng minh là có tổ chức
+* Tax Identification Number: định danh doanh nghiệp.
+* Registered Business Address: địa chỉ hoạt động.
+* Official Website: website để tăng uy tín.
+* Official Business Email: mail doanh nghiệp. Ví dụ: contact@abc.com  thay vì @gmail.com
+* Supporting Documents: 
+   * Portfolio.
+   * Event History.
+   * Media Coverage.
+4. Business rule
+1. Basic
+* Nếu các tổ chức có tên, logo, branding, Image, banner gần giống nhau thì phải bỏ luôn. Tránh đạo, bản quyền.
+* Quy mô: dưới 200 người. Workshop, Meetup, Offline, Training, Fan Meeting, Coffee Talk.
+* Organization Name: 
+   * Organization Name phải thể hiện được danh tính của tổ chức. → Có nghĩa.
+      * Ví dụ:         FPT Event Club,  Hola Football. KHông phải test123, 123,..
+* Organization Description: 
+   * Organization Description phải mô tả rõ lĩnh vực hoạt động. 
+   * Organization không được hoạt động trong lĩnh vực bị cấm. 
+   * Ví dụ:
+      * Technology Workshop
+      * Music Event
+      * Student Community
+      * Education Seminar
+* Responsible Person: 
+   * Responsible Person phải có email đã xác minh. 
+   * Responsible Person phải có số điện thoại đã xác minh. 
+   * Responsible Person  Name phải là tên người thật. 
+* Facebook/TikTok/Website:
+   * Organization phải cung cấp ít nhất một kênh công khai. 
+   * Kênh công khai phải tồn tại và truy cập được. 
+   * Kênh công khai phải có nội dung liên quan đến Organization.
+   * Thời gian tạo phải trên 30 ngày trước đó.
+   * Phải có ít nhất 3 bài đăng liên quan đến sự kiện.  
+* Branding:
+   * Logo không được chứa nội dung vi phạm. 
+   * Banner không được vi phạm policy. 
+* Address: 
+   * Organization phải khai báo khu vực hoạt động cụ thể ở Việt Nam. 
+* Anti Spam:
+   * Một Customer chỉ được có một Organization Application Pending. 
+   * Admin có quyền reject nếu phát hiện dấu hiệu spam. 
+   * Admin có quyền reject nếu phát hiện thông tin giả mạo. 
+   * Một customer chỉ Có thể request Organization Application 5 lần 1 tháng. Nếu để theo ngày thì số lượng rất nhiều + cần cancel, update gì đó phải đợi sang ngày sau → tốn time → UX không tốt. Tại sao lại là số 5: nếu là 1,2,3 thì có thể là đăng nhập hoặc sai xót gì đó, 5 là đẹp.
+* Admin Decision: 
+   * Admin phải nhập lý do khi Reject. 
+   * Admin có thể yêu cầu bổ sung thông tin trước khi duyệt. 
+* Paid event: 
+   * Mọi paid event phải có Payment Information. 
+   * Một Organization chỉ có một Payment Profile active. 
+   * Thay đổi Payment Information cần Admin Review. 
+   * Nếu Payment đang Pending Review không được tạo Paid Event mới. 
+   * Owner mới được sửa Payment Information. 
+   * Mọi thay đổi Payment Information phải Audit Log. 
+→ Mục đích của Basic này là xác định được chân dung của tổ chức và người đại diện. Xác định chứ không phải xác minh nhé. Hay nói cách khác là một vòng sàng lọc ban đầu nhằm loại bỏ spam, fake account và tạo ra một đầu mối chịu trách nhiệm với EventHub. 
+2. Professional
+* Company Legal Name  pahir viết rõ ràng và có ý nghĩa.
+* Business Registration Certificate có upload, đọc được, khớp với những thông tin ở trên.
+* Tax Number : có, đúng format, khớp trên công ty nếu có. 
+* Business Address: phải có địa chỉ rõ ràng.
+→ Tức là mình không cố gắng và không thể xác minh những thông tin này có đúng hay là không. Chỉ check xem có xác định được những thông tin đó hay là không. Nếu có vấn đề liên quan đến pháp luật, thì mình sẽ cung cấp các giao dịch, từ các giao dịch đó công an hợp tác với bên payment gateway và bank để lấy thông tin người hưởng thụ. Mình chỉ là bên bán vé thôi. Còn vấn đề scam vé, mình là bên giữ tiền, nếu event không tổ chức, có thiệt hại, không đúng với những gì quảng cáo thì mình hoàn toàn có thể hoàn tiền. 
+5. Các vấn đề sau này:
+1. Payment
+* Nền tảng sẽ giữ tiền vé. Tức là customer sẽ ck thẳng cho nền tàng. 
+→ ✅ Refund dễ.
+                               ✅ Event cancel dễ.
+                               ✅ EventHub giữ commission.
+     ✅ Giảm scam.
+2. Refund
+* Customer tự huỷ:
+* 7 ngày: 100%
+* 3 ngày: 50%
+* 24h: 0%
+* Organizer hoặc admin  huỷ:
+* 100%
+* Thời gian xử lý những vấn đề này: thường là sau 3-7 ngày ngày. Vì trong thời gian đó nó phải đi xác minh xem những thông tin muốn refund liên quan đến sự kiện: kiểu không đúng như những gì marketing,... 
+* Có thể liên hệ trực tiếp để hỏi xem vấn đề ở đâu. Sau đó liên hệ tới những người không refund để hỏi. 
+* Với những event thường sẽ phát livestream và camera. 
+3. Tạo event:
+I. Basic: 
+* Chỉ được tạo event với quy mô nhỏ dưới 200 người thôi. Và  coi như là một marketplace nới chỉ giải quyết vấn đề: 
+* Cung cấp nền tảng.
+* Review cơ bản.
+* Thanh toán.
+* Ticket.
+* Refund.
+* Giải quyết dispute.
+* Suspend organizer.
+* Nếu có vấn đề gì đó xảy ra thì bên Eventhub chỉ chịu trách nhiệm:
+* Suspend Event. 
+* Refund. 
+* Ban Organizer. 
+
+
+
+
+Business rule:
+* Một Customer chỉ được có tối đa một Organization Application ở trạng thái Pending hoặc Pending Update tại một thời điểm.
+* Một Customer chỉ được gửi tối đa 5 Organization Application trong vòng 30 ngày. 
+* Admin có quyền từ chối Organization Application nếu phát hiện:
+* Spam.
+* Giả mạo.
+* Nội dung vi phạm.
+* Thông tin không đủ xác định.
+* Admin có quyền yêu cầu Organizer bổ sung thông tin trước khi đưa ra quyết định cuối cùng. 
+* Admin bắt buộc nhập lý do khi Reject. 
+* Basic Organization chỉ được tổ chức sự kiện quy mô nhỏ dưới 200 người. 
+* Basic Organization chỉ được hoạt động trong các loại sự kiện: Workshop, Meetup, Training, Offline Fan Meeting, Coffee Talk, Student Community.
+* Organization Name phải:
+* Có ý nghĩa.
+* Thể hiện danh tính tổ chức.
+* Không được chứa tên vô nghĩa.
+* Organization Name không được gây nhầm lẫn với Organization đã tồn tại. Admin có quyền reject nếu:
+* Tên quá giống.
+* Logo quá giống.
+* Branding quá giống.
+* Organization Description phải:
+* Mô tả rõ lĩnh vực hoạt động.
+* Không được để trống.
+* Không thuộc lĩnh vực bị cấm.
+* Responsible Person phải có email đã xác minh. 
+* Responsible Person phải có số điện thoại đã xác minh. 
+* Responsible Person Name phải là tên người thật. Admin có quyền từ chối nếu phát hiện dấu hiệu giả mạo. 
+* Organization phải cung cấp tối thiểu một kênh công khai:
+* Facebook
+* TikTok
+* Website
+* Kênh công khai phải tồn tại và truy cập được. 
+* Kênh công khai phải có nội dung liên quan đến Organization. 
+* Kênh công khai phải được tạo ít nhất 30 ngày trước thời điểm nộp hồ sơ. 
+* Kênh công khai phải có tối thiểu 3 bài đăng liên quan. 
+* Organization Logo không được chứa nội dung vi phạm pháp luật hoặc policy. 
+* Banner và Profile Image không được chứa nội dung vi phạm. 
+* Admin có quyền reject nếu Branding gây nhầm lẫn với Organization khác. 
+* Organization phải khai báo khu vực hoạt động tại Việt Nam. 
+* Paid Event bắt buộc Organization có Payment Profile. 
+* Chỉ Organization Owner được sửa Payment Profile. 
+* Mọi thay đổi Payment Profile phải được Admin Review. 
+* Nếu Payment Profile đang Pending Review, Organization không được tạo Paid Event mới.
+* Mọi thay đổi Payment Information phải được Audit Log. 
+* Company Legal Name phải rõ ràng và có ý nghĩa. 
+* Business Registration Certificate:
+* Bắt buộc upload.
+* File đọc được.
+* Nội dung khớp với hồ sơ.
+* Tax Identification Number:
+* Bắt buộc.
+* Đúng format.
+* Khớp với thông tin doanh nghiệp.
+* Official Business Email phải là email doanh nghiệp. 
+* Basic Organization chỉ được tạo Small Scale Event. 
+* EventHub có quyền Suspend Event nếu phát hiện vi phạm. 
+* EventHub có quyền Suspend Organizer nếu phát hiện hành vi gian lận. 
+* Customer tự huỷ: >=7 ngày 100%; >=3 ngày 50%; <24h 0%
+* Organizer hoặc Admin hủy Event: 100%
+* Refund Request có thể cần thời gian xử lý từ 3-7 ngày. 
+* EventHub có quyền điều tra dispute trước khi quyết định Refund. 
+* EventHub là nền tảng trung gian cung cấp:
+* Event Marketplace.
+* Ticket Distribution.
+* Payment Processing.
+* Refund Processing.
+* Dispute Resolution.
+* EventHub không xác minh tính hợp pháp tuyệt đối của Organization hoặc Event. EventHub chỉ thực hiện quy trình kiểm tra thông tin cơ bản nhằm giảm spam và giả mạo. 
+* EventHub có quyền:
+* Suspend Event.
+* Refund Customer.
+* Suspend Organizer.
+* Ban Organizer.
+khi phát hiện vi phạm.
+* Trong trường hợp có yêu cầu từ cơ quan có thẩm quyền, EventHub có thể cung cấp dữ liệu giao dịch theo quy định pháp luật. 
+* Mọi Admin Decision phải Audit Log. 
+* Mọi Payment Profile Update phải Audit Log.
