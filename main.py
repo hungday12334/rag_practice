@@ -3,7 +3,10 @@ from langchain_core.documents import Document
 from src.chunking import chunk_doc
 from src.ingestion import load_txt_file
 from src.embeddings import get_nomic_embed
-from src.vectordb import create_qdrant_vector_store
+from src.vectordb import create_qdrant_vector_store, get_qdrant_vector_store
+from src.prompts import get_prompt
+from src.retrieval import create_retrieval
+from src.llm import get_llm_gemini_free
 def print_document_info(documents: list[Document]):
     """
     Prints the content and metadata of the first document in the list.
@@ -31,14 +34,25 @@ def main():
         print("Chunking documents...")
         chunked_documents = chunk_doc(documents, chunk_size=250, chunk_overlap=50)
         print(f"Successfully chunked into {len(chunked_documents)} chunks.")
-        print_document_info(chunked_documents)
+        # print_document_info(chunked_documents)
 
 
         print("Starting embedding process...")
         embeddings = get_nomic_embed()
 
-        print("Creating Qdrant vector store...")
-        vector_store = create_qdrant_vector_store(chunked_documents, embeddings, collection_name="EventHub")
+        # print("Creating Qdrant vector store...")
+        # vector_store = create_qdrant_vector_store(chunked_documents, embeddings, collection_name="EventHub")
+
+        print("Start retrieval process ..........")
+        vector_store = get_qdrant_vector_store(collection_name="EventHub", embeddings = embeddings)
+        retrieval = create_retrieval(vector_store, 5)
+        question= "Có mấy loại Target Customer hoặc Organizer"
+        doc = retrieval.invoke(question)
+        print_document_info(doc)
+
+        llm = get_llm_gemini_free()
+
+        print(llm.invoke(get_prompt(question,data=doc)))
     except Exception as e:
         print(f"An error occurred: {e}")
 if __name__ == "__main__":

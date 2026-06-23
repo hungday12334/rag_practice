@@ -2,6 +2,7 @@ from langchain_qdrant import QdrantVectorStore
 import os
 from langchain_core.documents import Document
 from dotenv import load_dotenv
+from qdrant_client import QdrantClient
 load_dotenv()  # Load environment variables from .env file
 def create_qdrant_vector_store(documents: list[Document], embeddings, collection_name:str) -> QdrantVectorStore:
     """
@@ -16,3 +17,11 @@ def create_qdrant_vector_store(documents: list[Document], embeddings, collection
         QdrantVectorStore: An instance of QdrantVectorStore containing the documents.
     """
     vector_store =  QdrantVectorStore.from_documents(documents, embeddings, collection_name=collection_name, url = os.getenv("QDRANT_HOST"))
+
+def get_qdrant_vector_store(collection_name:str, embeddings) -> QdrantVectorStore:
+    client = QdrantClient(url = os.getenv("QDRANT_HOST"))
+    return QdrantVectorStore(
+        client=client,
+        collection_name=collection_name,
+        embedding=embeddings
+    )
