@@ -19,7 +19,7 @@ def print_document_info(documents: list[Document]):
         print(f"Content: {doc.page_content}")
         print(f"Metadata: {doc.metadata}")
         print("-" * 40)  # Separator for better readability
-def main():
+async def ingestion():
     file_path = "document/EventHub.txt"  # Đường dẫn đến file .txt của bạn
     try:
         print(f"Loading documents from: {file_path}")
@@ -44,5 +44,3 @@ def main():
         vector_store = create_qdrant_vector_store(chunked_documents, embeddings, collection_name="EventHub")
     except Exception as e:
         print(f"An error occurred: {e}")
-if __name__ == "__main__":
-    main()
